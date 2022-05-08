@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Karmen</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projekat.css">
+    <link rel="icon" type="image/x-icon" href="./slike/logo.jpg">
+</head>
+    
+<body>
+  <nav class="navbar">
+    <div class="brand-title">Meni</div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="projekat.html">O nama</a></li>
+        <li><a href="korisnik.html">Korisnik</a></li>
+        <li><a href="administratorska.html">Administrator</a></li>
+        <li><a href="#" id="registracija">Registrujte se</a></li>
+        <li><a href="#" id="prijava">Prijavite se</a></li>
+      </ul>
+    </div>
+  </nav>
+  <script>
+  const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+navbarLinks.classList.toggle('active')
+})
+  </script>
+<div class="popup1">
+  <div class="popup1-content">
+      <div id="close">+</div>
+     <form action="">
+      <h2 class="pop">Registrujte se!</h2> <br> <hr> <br>
+      <input type="text" name="k_ime" id="k_ime" placeholder="Korisničko ime" required>
+         <br> <br>
+         <input type="password" name="password" id="password" placeholder="Lozinka" required>
+         <br> <br>
+         <input type="text" placeholder="Ime" name="ime" id="ime" required>
+         <br> <br>
+         <input type="text" placeholder="Prezime" name="prezime" id="prezime" required>
+         <br> <br>
+          <input type="email" placeholder="Email" name="email" id="email" required>
+          <br> <br>
+          <label for="date">Datum rođenja: </label>
+          <br> 
+          <input type="date"  id="datum" name="datum" required>
+          <br> <br> <hr> <br>
+          <input type="text" id="adresa" name="adresa"  placeholder="Adresa"required>
+          <br> <br>
+          <input type="tel" id="telefon" name="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Broj telefona" required>
+          <br> <br> <hr><br>
+          <input type="submit" id="submit" value="Submit" placeholder="Submit">
+      </form>
+  </div>
+</div>
+<div class="popup2">
+  <div class="popup-content2">
+      <div id="close1">+</div>
+     <form action="">
+      <h2 class="pop">Ulogujte se na svoj nalog!</h2> <br> <hr> <br>
+      <input type="text" name="k_ime" id="k_ime" placeholder="Korisničko ime" required>
+         <br>
+         <input type="password" placeholder="Lozinka" name="password" id="password" required>
+         <br> <hr> <br>
+         <input type="submit" id="submit" value="Submit" placeholder="Submit">
+      </form>
+  </div>
+</div>
+  <script>
+      document.getElementById("registracija").addEventListener('click', function(){
+          document.querySelector('.popup1').style.display='flex';
+      });
+      document.getElementById("close").addEventListener('click', function(){
+          document.querySelector(".popup1").style.display='none';
+      });
+      document.getElementById("prijava").addEventListener('click', function(){
+          document.querySelector(".popup2").style.display='flex';
+      });
+      document.getElementById("close1").addEventListener('click', function(){
+          document.querySelector(".popup2").style.display='none';
+      });
+  </script>
+
+        <div class="predstava">
+          <br>
+            <div class="h1_1">Podaci o predstavi </div> <br> <hr>
+
+            <ul>
+              <li><strong>Naziv:</strong> "Karmen"</li> <br>
+              <li><strong>Kod:</strong> 111111</li> <br>
+              <li><strong>Kratak opis:</strong> <br>
+                Opera Karmen Žorža Bizea – jedan je od najsnažnijih umetničkih izraza trijumfa strasti nad sentimentalnom ljubavlju. <br>
+                U odnosu na Merimeovu pripovetku, opera predstavlja moćnu poetsku nadgradnju kao plod smislenih strukturnih pomaka.</li> <br>
+              <li><strong>Trajanje:</strong> 3.5h</li> <br>
+              <li><strong>Žanr:</strong> Opera</li> <br> <hr>
+              <li><strong>Detaljan opis:</strong> <br>Bizeov Don Hoze, čovek je koga sudbinsko  određenje izvodi iz inercije svakodnevice i blede emotivne
+                 obaveznosti i uvlači u dubinu nečeg što ne poznaje – svet strasti izvan zakona.<br>
+                 Često na scenama predstavljaju Don Hozea kao nesolidnog vojnika koji zapostavlja svoje dužnosti kako bi sledio opasnu zavodnicu. <br>
+                 Međutim, Don Hoze počinje da živi tek kad upoznaje Karmen, ljubav se događa kao drugo rođenje, preobražavajući gotovo ektoplazmatičnu ličnost u punokrvnog čoveka
+                </li> <br>
+              <li><strong>Cena karte:</strong> 1000 din.</li> <br>
+              <li><strong>Maksimalan broj osoba:</strong> 200</li> <br>
+              <li><strong>Prosečna ocena:</strong> 4.6/5</li> <br>
+              <li><label for="number"> <strong>Vaša ocena:</strong></label> 
+                <input type="number" id="ocena" name="Ocena"
+                min="1" max="5"> </li> <br> <hr>
+              <li>
+                <button class="GFG1" style="position: center;"
+            onclick="window.location.href = 'izmena.html';">
+          <strong>Izmenite podatke</strong>
+            </button>
+              </li>
+
+            </ul>
+        </div>
+        <section class="footer">
+          <a href="https://www.facebook.com/">
+          <img src="./slike/ikona1.ico" alt="fejsbuk" height="50">
+         </a>
+ 
+         <a href="https://www.instagram.com/">
+             <img src="./slike/insta.webp" alt="instgram" height="50">
+            </a>
+ 
+            <a href="https://www.twitter.com/">
+             <img src="./slike/tviter.ico" alt="twitter" height="50">
+            </a>
+         </section>
+            <section class="pocetak">
+ 
+             <a href="predstava1.html">Idi na početak </a>
+         </section>
+ </section>
+    
+</body>
+
+
+</html>

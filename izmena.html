@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Izmenite podatke o predstavi</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projekat.css">
+    <link rel="icon" type="image/x-icon" href="./slike/logo.jpg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">Meni</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="projekat.html">O nama</a></li>
+            <li><a href="korisnik.html">Korisnik</a></li>
+            <li><a href="administratorska.html">Administrator</a></li>
+            <li><a href="#" id="registracija">Registrujte se</a></li>
+            <li><a href="#" id="prijava">Prijavite se</a></li>
+          </ul>
+        </div>
+      </nav>
+      <script>
+      const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+      </script>
+    <div class="popup1">
+        <div class="popup1-content">
+            <div id="close">+</div>
+           <form action="">
+            <h2 class="pop">Registrujte se!</h2> <br> <hr> <br>
+            <input type="text" name="k_ime" id="k_ime" placeholder="Korisničko ime" required>
+               <br> <br>
+               <input type="password" name="password" id="password" placeholder="Lozinka" required>
+               <br> <br>
+               <input type="text" placeholder="Ime" name="ime" id="ime" required>
+               <br> <br>
+               <input type="text" placeholder="Prezime" name="prezime" id="prezime" required>
+               <br> <br>
+                <input type="email" placeholder="Email" name="email" id="email" required>
+                <br> <br>
+                <label for="date">Datum rođenja: </label>
+                <br> 
+                <input type="date"  id="datum" name="datum" required>
+                <br> <br> <hr> <br>
+                <input type="text" id="adresa" name="adresa"  placeholder="Adresa"required>
+                <br> <br>
+                <input type="tel" id="telefon" name="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Broj telefona" required>
+                <br> <br> <hr><br>
+                <input type="submit" id="submit" value="Submit" placeholder="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="popup2">
+        <div class="popup-content2">
+            <div id="close1">+</div>
+           <form action="">
+            <h2 class="pop">Ulogujte se na svoj nalog!</h2> <br> <hr> <br>
+            <input type="text" name="k_ime" id="k_ime" placeholder="Korisničko ime" required>
+               <br>
+               <input type="password" placeholder="Lozinka" name="password" id="password" required>
+               <br> <hr> <br>
+               <input type="submit" id="submit" value="Submit" placeholder="Submit">
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("registracija").addEventListener('click', function(){
+            document.querySelector('.popup1').style.display='flex';
+        });
+        document.getElementById("close").addEventListener('click', function(){
+            document.querySelector(".popup1").style.display='none';
+        });
+        document.getElementById("prijava").addEventListener('click', function(){
+            document.querySelector(".popup2").style.display='flex';
+        });
+        document.getElementById("close1").addEventListener('click', function(){
+            document.querySelector(".popup2").style.display='none';
+        });
+    </script>
+
+
+    <div class="paragraf">Izmeni podatke o predstavi</div>
+
+    <form action="#">
+     <fieldset>
+      <legend>Podaci:</legend>
+      <label for="text">Naziv:</label>
+      <input type="text" id="naziv" name="naziv" value="Karmen"><br><br>
+      <label for="number">Kod:</label>
+  <input type="number" id="Kod" name="Kod" value="111111"><br><br>
+  <label for="time"> Trajanje:</label>
+  <input type="text" id="Trajanje" name="Trajanje" value="3.5h"><br><br>
+  <label for="text">Žanr:</label>
+  <input type="text" id="Žanr" name="Žanr" value="Opera"><br><br>
+  <label for="text"> Cena:</label>
+  <input type="text" id="Cena" name="Cena" value="1000 din"><br><br>
+  <label for="number"> Makismalan broj osoba:</label> 
+  <input type="number" id="Maks" name="Maks" value="200"><br><br> <hr>
+  <label for="text"> Kratak opis:</label>
+  <textarea id="kratak_opis" name="kratak_opis" rows="10" cols="40" placeholder=" Opera Karmen Žorža Bizea">
+      </textarea> <br> <br>
+    <label for="text"> Detaljan opis:</label>
+      <textarea id="detaljan_opis" name="detaljan_opis" rows="10" cols="60">
+          </textarea> <br> <hr>
+      <input type="submit" id="submit" value="Submit">
+     </fieldset>
+    </form>
+
+    <section class="footer">
+        <a href="https://www.facebook.com/">
+        <img src="./slike/ikona1.ico" alt="fejsbuk" height="50">
+       </a>
+
+       <a href="https://www.instagram.com/">
+           <img src="./slike/insta.webp" alt="instgram" height="50">
+          </a>
+
+          <a href="https://www.twitter.com/">
+           <img src="./slike/tviter.ico" alt="twitter" height="50">
+          </a>
+       </section>
+          <section class="pocetak">
+
+           <a href="izmena.html">Idi na početak </a>
+       </section>
+</section>
+
+
+
+
+
+</body>
+</html>
