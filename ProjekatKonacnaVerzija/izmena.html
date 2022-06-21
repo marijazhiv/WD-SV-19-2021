@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Izmenite podatke o predstavi</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projekat.css">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title"><img src="logo2.png" alt="Logo" width="50px" height="50px"></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul id="meniii">
+            <li><a href="projekat.html">O nama</a></li>
+            <li><a href="korisnik.html">Korisnik</a></li>
+            <li><a href="administratorska.html">Administrator</a></li>
+            <li><a href="#" id="registracija">Registrujte se</a></li>
+            <li><a href="#" id="prijava">Prijavite se</a></li>
+          </ul>
+        </div>
+      </nav>
+      <script>
+      const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+      </script>
+    <div class="popup1">
+        <div class="popup1-content">
+            <div id="close">+</div>
+           <form action="">
+            <h2 class="pop">Registrujte se!</h2> <br> <hr> <br>
+            <input type="text" name="k_ime" id="k_ime" placeholder="Korisničko ime" required>
+               <br> <br>
+               <input type="password" name="password" id="password" placeholder="Lozinka" required>
+               <br> <br>
+               <input type="text" placeholder="Ime" name="ime" id="ime" required>
+               <br> <br>
+               <input type="text" placeholder="Prezime" name="prezime" id="prezime" required>
+               <br> <br>
+                <input type="email" placeholder="Email" name="email" id="email" required>
+                <br> <br>
+                <label for="date">Datum rođenja: </label>
+                <br> 
+                <input type="date"  id="datum" name="datum" required>
+                <br> <br> <hr> <br>
+                <input type="text" id="adresa" name="adresa"  placeholder="Adresa"required>
+                <br> <br>
+                <input type="tel" id="telefon" name="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Broj telefona" required>
+                <br> <br> <hr><br>
+                <input type="submit" id="submit" value="Submit" placeholder="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="popup2">
+        <div class="popup-content2">
+            <div id="close1">+</div>
+           <form action="">
+            <h2 class="pop">Ulogujte se na svoj nalog!</h2> <br> <hr> <br>
+            <input type="text" name="k_ime" id="k_ime" placeholder="Korisničko ime" required>
+               <br>
+               <input type="password" placeholder="Lozinka" name="password" id="password" required>
+               <br> <hr> <br>
+               <input type="submit" id="submit" value="Submit" placeholder="Submit">
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("registracija").addEventListener('click', function(){
+            document.querySelector('.popup1').style.display='flex';
+        });
+        document.getElementById("close").addEventListener('click', function(){
+            document.querySelector(".popup1").style.display='none';
+        });
+        document.getElementById("prijava").addEventListener('click', function(){
+            document.querySelector(".popup2").style.display='flex';
+        });
+        document.getElementById("close1").addEventListener('click', function(){
+            document.querySelector(".popup2").style.display='none';
+        });
+    </script>
+
+
+    <div class="paragraf">Izmeni podatke o predstavi</div>
+
+    <form action="#" id="aaa">
+     <fieldset>
+      <legend>Podaci:</legend>
+      <label for="picture">Slika predstave</label>
+      <input type="text" name="pic" id="picture8" value="https://i.imgur.com/ddGKPTl.jpg"> <br>
+      <input type="file" name="picture" id="picture">
+      <label for="text">Naziv:</label>
+      <input type="text" id="nazivPP" name="naziv" value="Karmen"><br><br>
+      <label for="number">Kod:</label>
+  <input type="number" id="kodPP" name="Kod" value="111111"><br><br>
+  <label for="time"> Trajanje:</label>
+  <input type="text" id="trajanjePP" name="Trajanje" value="3.5h"><br><br>
+  <label for="genre" >Žanr:</label>
+<select name="genre" id="zanrPP">
+    <option value="Drama" >Drama</option>
+    <option value="Tragikomedija" >Tragikomedija</option>
+    <option value="Farsa" >Farsa</option>
+    <option value="Komedija" >Komedija</option>
+    <option value="Tragedija">Tragedija</option>
+    <option value="Muzička parodija" >Muzička parodija</option>
+    <option value="Mjuzikl" >Mjuzikl</option>
+    <option value="Romantika" >Romantika</option>
+</select>
+  
+<br><br>
+  <label for="text"> Cena:</label>
+  <input type="text" id="cenaPP" name="Cena" value="1000 din"><br><br>
+  <label for="text"> Prosečna ocena:</label>
+  <input type="number" id="prosecna_ocenaPP" name="Prosecna ocena" value="4.8" readonly><br><br>
+  
+  <label for="text"> Makismalan broj osoba:</label> 
+  <input type="number" id="maksPP" name="Maks" value="200"><br><br> <hr>
+  <label for="text"> Kratak opis:</label>
+  <textarea id="kratak_opisPP" name="kratak_opis" rows="10" cols="40" placeholder=" Opera Karmen Žorža Bizea">
+      </textarea> <br> <br>
+    <label for="text"> Detaljan opis:</label>
+      <textarea id="detaljan_opisPP" name="detaljan_opis" rows="10" cols="60">
+          </textarea> <br> <hr>
+      <input type="submit" id="submit123" value="Submit">
+      <button id="brisanje123">
+        Obrišite predstavu
+    </button>
+     </fieldset>
+    </form>
+
+    <section class="footer">
+        <a href="https://www.facebook.com/">
+        <img src="ikona1.ico" alt="fejsbuk" height="50">
+       </a>
+
+       <a href="https://www.instagram.com/">
+           <img src="insta.webp" alt="instgram" height="50">
+          </a>
+
+          <a href="https://www.twitter.com/">
+           <img src="tviter.ico" alt="twitter" height="50">
+          </a>
+       </section>
+          <section class="pocetak">
+
+           <a href="izmena.html">Idi na početak </a>
+       </section>
+</section>
+<script src="validacijaPredstava1.js"></script>
+
+
+
+
+
+
+</body>
+</html>

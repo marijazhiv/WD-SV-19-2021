@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input[type=text]:invalid {
+    border: blue solid 1px;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.container > label {
+   text-align: center;
+}
+#comment{
+    background-color:#FFC3EB;
+    height: 100px;
+    
+}
+#addComments {
+    width: 20%;
+    padding: 5px;
+    background-color: #F9C3E7;
+    color: black;
+    align-self: center;
+}
+
+.wrapper > button {
+    margin-right: 5px;
+    padding: 5px;
+    background-color: #F689D2;
+    color: black;
+}
